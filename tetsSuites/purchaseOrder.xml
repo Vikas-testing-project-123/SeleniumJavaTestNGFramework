@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite"> <!--parallel is the keyword to run the classes in parallel-->
+
+	<!--//Run a particular group which has error handling-->
+	<groups>
+		<run>
+			<include name="purchase"></include>
+		</run>
+	</groups>
+
+	<!--	
+//Now it will run only error handling group from all the test cases but it will
+	show the failure because it will count 
+the before and after method as group and didn't run that without this the error
+	handling group will fail so add a parameter called ("alwaysRun=true")'-->
+
+	<test thread-count="5" name="Submit Order Test"><!--Thread count is used to run the menthods in parallel-->
+		<classes>
+			<class
+				name="SeleniumTesting.SeleniumTestNGFramework.Tests.SubmitOrderTest" />
+		</classes>
+	</test> <!--
+	Test -->
+
+	<test thread-count="5" name="Error Validation Test">
+		<classes>
+			<class
+				name="SeleniumTesting.SeleniumTestNGFramework.Tests.ErrorValidationsTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

@@ -1,0 +1,16 @@
+1 For this code you can run from the app
+ But if you want to run it through maven cmd you have to install maven 
+ Install maven set environment path run cmd on downloaded maven folder
+ Use cmd mvn -verison to check if the aven installed or not 
+ Set the maven testng integration plugin to pom.xml file set id and profiles
+ cmd: 1. mvn test (Run all the tests) 
+ 2. mvn test -PPublicid (with -p you give the id name and will run that particular testcase) 
+ 3 mvn test -PPublicid -Dbowser (-D will set for the browser to run on a particular browser)
+  
+ Now we have to set it in jenkins install and set up jenkins if you login with admin then 
+ (admin will be th username and C:\Users\17445\.jenkins\secrets\initialAdminpassword had the password for login)
+ Run this cmd at the location where jenkins war is located(jave -jar jenkins.war -httpPort=8080) 
+ Run this on BROWSER(localhost:8080)
+ 
+ Set the new job give the path of the project see full flow with copy and make the project and build it and you can also schedule the job accordingly
+ 
